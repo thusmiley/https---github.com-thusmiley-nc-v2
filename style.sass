@@ -118,11 +118,13 @@ header
 @media screen and (max-width: 720px)  
     header .container
         margin-top: 15px
+        .cta
+            width: 150px
     .container
         width: 343px
     
     h1
-        font-size: 34px
+        font-size: 35px
         line-height: 35px
 
     h2
@@ -137,11 +139,9 @@ header
         line-height: 23px        
 
     .cta
-        padding: 7px
+        padding: 10px
         font-size: 16px
         line-height: 18px     
-        &:hover
-            box-shadow: 3px 3px $orange
 
     .logo img
         width: 60%   
@@ -201,7 +201,7 @@ main
         background-image: none
         padding: 0
         p
-            margin: 20px 0 30px 0
+            margin: 20px 0 50px 0
             width: 100%
     .hero-right
         display: block
@@ -209,7 +209,7 @@ main
     .hero-left
         width: 100%
         text-align: center
-        margin-bottom: 30px
+        margin-bottom: 50px
 
 
 // Services  
@@ -469,6 +469,7 @@ main
 
     .pricing-cards
         flex-direction: column
+        margin-top: 30px  
 
     .pricing-card:not(:last-child)
         margin-right: 0
@@ -585,7 +586,7 @@ main
         width: 100%
         text-align: center
         margin-right: 0
-        margin-bottom: 50px
+        margin-bottom: 30px
         p
             margin-top: 10px
 
@@ -612,6 +613,7 @@ textarea
     margin-bottom: 32px
     padding: 15px 20px 
     border: 2px solid black 
+    border-radius: none
     background-color: white 
     font-family: 'Inconsolata', monospace
     color: black
@@ -620,8 +622,11 @@ textarea
 textarea:focus, input:focus
     color: black
     outline: none
+    border-radius: none
+
 input, select, textarea
     color: black
+    border-radius: none
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
@@ -635,6 +640,19 @@ input:-webkit-autofill:active
 .contact-form .cta
     width: 200px
     cursor: pointer
+    border-radius: none
+    font-family: 'Inconsolata', monospace
+    padding: 14px 40px
+    border: 2px solid black    
+    font-size: 18px
+    line-height: 26px
+    font-weight: 700
+    background-color: white
+    color: black
+    &:hover
+        box-shadow: 5px 5px $orange
+        transition: all 0.5s ease
+
 
 @media screen and (max-width: 1150px)
     #contact
@@ -653,7 +671,11 @@ input:-webkit-autofill:active
 
 @media screen and (max-width: 720px)  
     #contact p
-        margin: 10px 0 50px 0   
+        margin: 10px 0 30px 0  
+    #contact .cta
+        padding: 10px
+        font-size: 16px
+        line-height: 18px     
 
 // Footer    
 footer
@@ -670,11 +692,11 @@ footer
             font-size: 16px    
     .socials
         display: flex
-        a
-            margin-left: 36px
-            &:hover
-                filter: invert(0.33) sepia(0.5) saturate(20) hue-rotate(0deg) brightness(0.99)
-                transition: all 0.5s ease
+        justify-content: space-between
+        width: 90px
+        a:hover
+            filter: invert(0.33) sepia(0.5) saturate(20) hue-rotate(0deg) brightness(0.99)
+            transition: all 0.5s ease
 
 @media screen and (max-width: 1150px)
     main
@@ -683,11 +705,8 @@ footer
         height: 80px
         .container
             margin-top: 26px
-    .socials
-        a
-            margin-left: 10px
-        img
-            width: 32px
+    .socials img
+        width: 32px
 
 @media screen and (max-width: 720px)  
     main

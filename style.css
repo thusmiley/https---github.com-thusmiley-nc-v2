@@ -133,11 +133,14 @@ header .logo img {
   header .container {
     margin-top: 15px;
   }
+  header .container .cta {
+    width: 150px;
+  }
   .container {
     width: 343px;
   }
   h1 {
-    font-size: 34px;
+    font-size: 35px;
     line-height: 35px;
   }
   h2 {
@@ -153,12 +156,9 @@ header .logo img {
     line-height: 23px;
   }
   .cta {
-    padding: 7px;
+    padding: 10px;
     font-size: 16px;
     line-height: 18px;
-  }
-  .cta:hover {
-    box-shadow: 3px 3px #ff8c00;
   }
   .logo img {
     width: 60%;
@@ -240,7 +240,7 @@ main {
     padding: 0;
   }
   .hero .container p {
-    margin: 20px 0 30px 0;
+    margin: 20px 0 50px 0;
     width: 100%;
   }
   .hero-right {
@@ -250,7 +250,7 @@ main {
   .hero-left {
     width: 100%;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
 }
 .services {
@@ -556,6 +556,7 @@ main {
   }
   .pricing-cards {
     flex-direction: column;
+    margin-top: 30px;
   }
   .pricing-card:not(:last-child) {
     margin-right: 0;
@@ -692,7 +693,7 @@ main {
     width: 100%;
     text-align: center;
     margin-right: 0;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
   .team-heading p {
     margin-top: 10px;
@@ -722,6 +723,7 @@ textarea {
   margin-bottom: 32px;
   padding: 15px 20px;
   border: 2px solid black;
+  border-radius: none;
   background-color: white;
   font-family: "Inconsolata", monospace;
   color: black;
@@ -732,10 +734,12 @@ textarea {
 textarea:focus, input:focus {
   color: black;
   outline: none;
+  border-radius: none;
 }
 
 input, select, textarea {
   color: black;
+  border-radius: none;
 }
 
 input:-webkit-autofill,
@@ -751,6 +755,19 @@ input:-webkit-autofill:active {
 .contact-form .cta {
   width: 200px;
   cursor: pointer;
+  border-radius: none;
+  font-family: "Inconsolata", monospace;
+  padding: 14px 40px;
+  border: 2px solid black;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  background-color: white;
+  color: black;
+}
+.contact-form .cta:hover {
+  box-shadow: 5px 5px #ff8c00;
+  transition: all 0.5s ease;
 }
 
 @media screen and (max-width: 1150px) {
@@ -772,7 +789,12 @@ textarea {
 }
 @media screen and (max-width: 720px) {
   #contact p {
-    margin: 10px 0 50px 0;
+    margin: 10px 0 30px 0;
+  }
+  #contact .cta {
+    padding: 10px;
+    font-size: 16px;
+    line-height: 18px;
   }
 }
 footer {
@@ -792,9 +814,8 @@ footer .container p {
 }
 footer .socials {
   display: flex;
-}
-footer .socials a {
-  margin-left: 36px;
+  justify-content: space-between;
+  width: 90px;
 }
 footer .socials a:hover {
   filter: invert(0.33) sepia(0.5) saturate(20) hue-rotate(0deg) brightness(0.99);
@@ -810,9 +831,6 @@ footer .socials a:hover {
   }
   footer .container {
     margin-top: 26px;
-  }
-  .socials a {
-    margin-left: 10px;
   }
   .socials img {
     width: 32px;
