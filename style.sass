@@ -119,13 +119,13 @@ header
     header .container
         margin-top: 15px
         .cta
-            width: 150px
+            width: 290px
     .container
         width: 343px
     
     h1
-        font-size: 35px
-        line-height: 35px
+        font-size: 34px
+        line-height: 34px
 
     h2
         font-size: 36px         
@@ -606,14 +606,15 @@ main
         margin: 20px 0 95px 0   
 
 .contact-form input,
-textarea
+textarea,
+select
     justify-content: center
     align-items: center
     width: 80%
     margin-bottom: 32px
     padding: 15px 20px 
     border: 2px solid black 
-    border-radius: none
+    border-radius: 0
     background-color: white 
     font-family: 'Inconsolata', monospace
     color: black
@@ -622,11 +623,7 @@ textarea
 textarea:focus, input:focus
     color: black
     outline: none
-    border-radius: none
-
-input, select, textarea
-    color: black
-    border-radius: none
+    border-radius: 0
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
@@ -636,6 +633,7 @@ input:-webkit-autofill:active
     -webkit-text-fill-color: black !important    
     font-family: 'Inconsolata', monospace!important
     background-clip: content-box !important
+    -webkit-appearance: none
 
 .contact-form .cta
     width: 200px
